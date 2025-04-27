@@ -58,7 +58,7 @@ function loadQuestion(index) {
             const correctAnswer = question['CORRECT ANSWER'];
             const selectedAnswer = option.id;
 
-            if (selectedAnswer === correctAnswer) {
+            if (selectedAnswer == correctAnswer) {
                 option.style.backgroundColor = '#4CAF50'; 
             } else {
                 option.style.backgroundColor = 'red'; 
