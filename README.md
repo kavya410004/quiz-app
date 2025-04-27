@@ -1,1 +1,1 @@
-# CCD_Quiz
+# quiz-app
