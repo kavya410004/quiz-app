@@ -9,15 +9,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
-<body>
-    <h1>Welcome to the CCD Quiz (III - I)</h1>
+    <h1>Welcome to the CCD Quiz (III - II)</h1>
     <div id="buttons">
-        <button onclick="startQuiz('reasoning.json')">Reasoning</button>
-        <button onclick="startQuiz('aptitude.json')">Aptitude</button>
-        <button onclick="startQuiz('verbal.json')">Verbal</button>
+        <button onclick="startQuiz('three-two/reasoning.json')">Reasoning</button>
+        <button onclick="startQuiz('three-two/aptitude.json')">Aptitude</button>
+        <button onclick="startQuiz('three-two/verbal.json')">Verbal</button>
+        <button onclick="startQuiz('three-two/technical-1.json')">Technical (MODULE 4)</button>
+        <button onclick="startQuiz('three-two/technical-2.json')">Technical (MODULE 5)</button>
     </div>
+    
+    
+    <!-- <div class="dropdown-container">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" onclick="toggleDropdown()">
+            CCD QUIZ (III - II) <i class="fas fa-caret-down"></i>
+        </button>
+        <div id="dropdown-menu" class="dropdown-menu" aria-label="Quiz selection">
+            <button onclick="startQuiz('three-two/reasoning.json')">Reasoning</button>
+            <button onclick="startQuiz('three-two/aptitude.json')">Aptitude</button>
+            <button onclick="startQuiz('three-two/verbal.json')">Verbal</button>
+            <button onclick="startQuiz('three-two/technical-1.json')">Technical (MODULE 4)</button>
+            <button onclick="startQuiz('three-two/technical-2.json')">Technical (MODULE 5)</button>
+        </div>
+    </div> -->
+
+    <!-- <script>
+        function toggleDropdown() {
+            const container = document.querySelector('.dropdown-container');
+            const toggle = document.querySelector('.dropdown-toggle');
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !expanded);
+            container.classList.toggle('active');
+        }
+        document.addEventListener('click', function(event) {
+            const container = document.querySelector('.dropdown-container');
+            if (!container.contains(event.target)) {
+                container.classList.remove('active');
+                document.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script> -->
+    
     <footer class="footer-home">
-        <p>&copy; 2024<a href="" style="text-decoration: underline;">CCD Quiz</a>| Designed by<a href="https://github.com/kavya410004">kavya410004</a></p>
+        <p>&copy; 2025<a href="" style="text-decoration: underline;">CCD Quiz</a>| Designed by<a href="https://www.linkedin.com/in/venkata-kavya-sai-d-bb7717250/">Kavya Sai</a></p>
     </footer>
 
     <script src="js/main.js"></script>

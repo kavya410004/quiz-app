@@ -4,6 +4,7 @@ let data = [];
 const questionNumberElement = document.getElementById('question-number');
 const topicNameElement = document.getElementById('topic-name');
 const questionTextElement = document.getElementById('question-text');
+const imageElement = document.getElementById('image');
 const optionAElement = document.getElementById('A');
 const optionBElement = document.getElementById('B');
 const optionCElement = document.getElementById('C');
@@ -17,7 +18,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const quizFile = urlParams.get('file');
 
 function loadJsonData(filename) {
-    fetch(`three-one/${filename}`)
+    console.log(filename);
+    fetch(`${filename}`)
         .then(response => response.json())
         .then(jsonData => {
             data = jsonData;
@@ -28,17 +30,24 @@ function loadJsonData(filename) {
 
 function loadQuestion(index) {
     const question = data[index];
+    console.log(question);
     questionNumberElement.textContent = `Question ${index + 1}`;
     topicNameElement.textContent = question['TOPIC NAME'];
     questionTextElement.textContent = question['QUESTION TEXT'];
-    optionAElement.textContent = question['OPTION  A'];
-    optionBElement.textContent = question['OPTION  B'];
-    optionCElement.textContent = question['OPTION  C'];
-    optionDElement.textContent = question['OPTION  D'];
-    if (question['OPTION  E']) {
-        optionEElement.textContent = question['OPTION  E'];
+    optionAElement.textContent = question['OPTION A'];
+    optionBElement.textContent = question['OPTION B'];
+    optionCElement.textContent = question['OPTION C'];
+    optionDElement.textContent = question['OPTION D'];
+    if (question['OPTION E']) {
+        optionEElement.textContent = question['OPTION E'];
     }else{
         optionEElement.style.display = 'none';
+    }
+    if(question['IMAGE']){
+        imageElement.style.display = 'block';
+        imageElement.src = question['IMAGE'];
+    }else{
+        imageElement.style.display = 'none';
     }
 
     const options = [optionAElement, optionBElement, optionCElement, optionDElement, optionEElement];
