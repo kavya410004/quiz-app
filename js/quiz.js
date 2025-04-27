@@ -29,8 +29,7 @@ function loadJsonData(filename) {
 }
 
 function loadQuestion(index) {
-    const question = data[index];
-    console.log(question);
+    window.scrollTo({ top: 0, behavior: "smooth" });
     questionNumberElement.textContent = `Question ${index + 1}`;
     topicNameElement.textContent = question['TOPIC NAME'];
     questionTextElement.textContent = question['QUESTION TEXT'];
